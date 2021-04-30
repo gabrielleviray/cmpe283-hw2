@@ -101,14 +101,36 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 ```
 sudo apt-get install virt-manager
 ```
-2. Download Ubuntu ISO file and create a virtual machine using virtual manager.
-3. Build and execute test.c:
+2. Download Ubuntu ISO file and create a nested virtual machine using virtual manager.
+3. Install cpuid
+```
+sudo apt-get install cpuid
+```
+### Testing 
+5. Build and execute test.c to see exit count and exit duration:
 ```
 gcc test.c
 ```
-```./a.out
+```
+./a.out
+```
+6. View register values
+```
+cpuid -l 0x4FFFFFFFF
 ```
 
+### Question 1: Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?  
+
+There isn't a stable rate at which the number of exits increases. 
+
+
+### Question 2:  Approximately how many exits does a full VM boot entail? 
+
+A full VM boot entails roughly 
+
+
+### Reference Links
+- 
 
 
 
