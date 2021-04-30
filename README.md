@@ -45,5 +45,5 @@ Team: Gabrielle Viray (012340068)
     
 ### Implementation
 
-1. Modified CPUID emulation code in ** cpuid.c**:
+1. Modified CPUID emulation code in cpuid.c:
 
