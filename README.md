@@ -8,7 +8,9 @@ Team: Gabrielle Viray (012340068)
     a.
     ```sudo bash```
     b.
-    ```apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev ```
+    ```
+    apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
+    ```
     c. 
     ```uname -a```
     d. 
@@ -17,11 +19,13 @@ Team: Gabrielle Viray (012340068)
     ``` make oldconfig```
     f.
     ```
-    make && make modules && make install && make modules-install```
+    make && make modules && make install && make modules-install
+    ```
     g.
     ```
     reboot
     ```
+    
 3. Verify newer kernel after reboot using:
     ```uname -a```
     
