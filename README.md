@@ -92,6 +92,9 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	return kvm_skip_emulated_instruction(vcpu);
 }
 ```
+2. Compute the total number of exits and duration of exits in vmx.c:
+
+
 
 
 
