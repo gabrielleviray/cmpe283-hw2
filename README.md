@@ -11,11 +11,11 @@ Team: Gabrielle Viray (012340068)
     ```
     apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
     ```
-    c. 
+    <br>c. 
     ```uname -a```
-    d. 
+    <br>d. 
     ``` cp /boot/config-5.8.0-50-generic ./.config```
-    e.
+    <br>e.
     ``` make oldconfig```
     f.
     ```
