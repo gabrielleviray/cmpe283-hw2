@@ -132,7 +132,6 @@ A full VM boot entails roughly 347300 exits.
 ### Reference Links
 - https://help.ubuntu.com/community/KVM/VirtManager
 - https://ubuntu.com/#download
-- 
 
 
 
