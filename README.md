@@ -6,23 +6,23 @@ Team: Gabrielle Viray (012340068)
 1. Make sure Linux git repository is cloned.
 2. Building the Kernel<br>
   
-    ```sudo bash```
+    a. ```sudo bash```
 
-    ```apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev ```
+    b```apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev ```
     
-    ```uname -a```
+    c.```uname -a```
     
 
-    ``` cp /boot/config-5.8.0-50-generic ./.config```
+    d.``` cp /boot/config-5.8.0-50-generic ./.config```
     
  
-    ``` make oldconfig```
+    e. ``` make oldconfig```
     
  
-    ```make && make modules && make install && make modules-install```
+    f. ```make && make modules && make install && make modules-install```
     
  
-    ```reboot```
+    e. ```boot```
     
 3. Verify newer kernel after reboot using: ```uname -a```
     
