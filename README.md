@@ -5,13 +5,13 @@ Team: Gabrielle Viray (012340068)
 ## Steps to Complete the Assignment
 
 ### Initial Steps
-1. Make sure Linux git repository is cloned.
+1. Make sure Linux git repository is forked from https://github.com/torvalds/linux to your repo and clone your repo. In my case: https://github.com/gabrielleviray/linux.git
 2. Building the Kernel<br>
-  a. Root user mode
+  a. Enter root user mode with the following command:
   ```
   sudo bash
   ```
-  b. Install
+  b. Install kernel-package:
   ```
   apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
   ```  
