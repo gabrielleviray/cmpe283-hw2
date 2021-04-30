@@ -92,7 +92,22 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	return kvm_skip_emulated_instruction(vcpu);
 }
 ```
-2. Compute the total number of exits and duration of exits in vmx.c:
+2. Compute the total number of exits and duration of exits in vmx.c ( Changes in vmx.c have a comment of '/* CMPE 283 Assignment2 */' )
+3. Repeat steps 1a, 1f in 'Initial Steps' Section to rebuild kernel again.
+
+### Nested VM
+
+1. Installed virtual manager:
+```
+sudo apt-get install virt-manager
+```
+2. Download Ubuntu ISO file and create a virtual machine using virtual manager.
+3. Build and execute test.c:
+```
+gcc test.c
+```
+```./a.out
+```
 
 
 
