@@ -45,5 +45,53 @@ Team: Gabrielle Viray (012340068)
     
 ### Implementation
 
-1. Modified CPUID emulation code in cpuid.c:
+1. Modified ```int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)``` function in cpuid.c file:
+```
+int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
+{
+	u32 eax, ebx, ecx, edx;
+
+	if (cpuid_fault_enabled(vcpu) && !kvm_require_cpl(vcpu, 0))
+		return 1;
+
+	eax = kvm_rax_read(vcpu);
+	ecx = kvm_rcx_read(vcpu);
+
+	// #######################################################
+	// #                                                     #
+	// #           CMPE 283 CPUID leaf function              #
+	// #                                                     # 
+	// #######################################################
+	if (eax == 0x4FFFFFFF){
+
+		pr_info("Leaf function");
+		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
+		
+		// return the total number of exits(all types) in %eax
+		eax = atomic64_read(&exit_counter_value);
+		pr_info("Total time spent processing all exits in eax=%u", eax);	
+
+		// return the high 32 bits of the total time spent processing all exits in %ebx
+		ebx = (atomic64_read(&exit_duration_value) >> 32);
+		pr_info("Total time spent processing all exits in ebx=%u", ebx);	
+
+		// return the low 32 bits of the total time spent processing all exits i n %ecx
+		ecx = (atomic64_read(&exit_duration_value) & 0xFFFFFFFF);
+		pr_info("Total time spent processing all exits in ecx=%u", ecx);
+
+	} else {
+
+		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, false);
+		
+	}
+
+	kvm_rax_write(vcpu, eax);
+	kvm_rbx_write(vcpu, ebx);
+	kvm_rcx_write(vcpu, ecx);
+	kvm_rdx_write(vcpu, edx);
+	return kvm_skip_emulated_instruction(vcpu);
+}
+```
+
+
 
