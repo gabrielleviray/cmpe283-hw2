@@ -7,10 +7,8 @@ Team: Gabrielle Viray (012340068)
 ### Initial Steps
 1. Make sure Linux git repository is cloned.
 2. Building the Kernel<br>
-  
-    a. ```sudo bash```
-
-    b```apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev ```
+  a. ```sudo bash```
+  b```apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev ```
     
     c.```uname -a```
     
