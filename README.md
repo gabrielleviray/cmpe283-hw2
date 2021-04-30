@@ -116,7 +116,7 @@ gcc test.c
 ```
 6. View register values
 ```
-cpuid -l 0x4FFFFFFFF
+cpuid -l 0x4FFFFFFF
 ```
 
 ### Question 1: Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?  
