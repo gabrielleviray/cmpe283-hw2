@@ -121,15 +121,17 @@ cpuid -l 0x4FFFFFFFF
 
 ### Question 1: Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations?  
 
-There isn't a stable rate at which the number of exits increases. 
+There isn't a stable rate at which the number of exits increases. More exits are performed during other VM operations such as ept violations and MSR exit reasons, I/O instruction, etc.
 
 
 ### Question 2:  Approximately how many exits does a full VM boot entail? 
 
-A full VM boot entails roughly 
+A full VM boot entails roughly 347300 exits.
 
 
 ### Reference Links
+- https://help.ubuntu.com/community/KVM/VirtManager
+- https://ubuntu.com/#download
 - 
 
 
