@@ -2,7 +2,9 @@
 
 Team: Gabrielle Viray (012340068)
 
-## Initial Steps
+## Steps to Complete the Assignment
+
+### Initial Steps
 1. Make sure Linux git repository is cloned.
 2. Building the Kernel<br>
   
@@ -26,4 +28,7 @@ Team: Gabrielle Viray (012340068)
     
 3. Verify newer kernel after reboot using: ```uname -a```
     
-## Implementation
+### Implementation
+
+1. Modified CPUID emulation code in ** cpuid.c**:
+
