@@ -2,7 +2,7 @@
 
 Team: Gabrielle Viray (012340068)
 
-Initial Steps:
+##Initial Steps:
     1. Make sure Linux git repository is cloned.
     2. Building the Kernel
         a. ```sudo bash```
@@ -15,5 +15,5 @@ Initial Steps:
     3. Verify newer kernel after reboot using:
     ```uname -a```
     
-Implementation:
+##Implementation:
       1.
