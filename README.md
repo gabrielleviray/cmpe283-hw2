@@ -15,15 +15,15 @@ Team: Gabrielle Viray (012340068)
   ```
   apt-get install build-essential kernel-package fakeroot libncurses5-dev libssl-dev ccache bison flex libelf-dev 
   ```  
-  c. Note down Kernel Version
+  c. Note down Kernel Version after the command:
   ```
   uname -a
   ```
-  d. 
+  d. Substitute version obtained in Step c(previous step) into the following command:
   ```
   cp /boot/config-5.8.0-50-generic ./.config
   ```
-  e. Hold down enter for default settings
+  e. Hold down enter for default settings while running the command:
   ```
   make oldconfig
   ```
@@ -38,7 +38,6 @@ Team: Gabrielle Viray (012340068)
   ```
   reboot
   ```
-    
 3. Verify newer kernel after reboot using: 
   ```
   uname -a
